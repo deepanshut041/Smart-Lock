@@ -7,12 +7,43 @@
     tools:context="com.example.sdc.smartlock.MainActivity">
 
     <TextView
+        android:id="@+id/tap_lock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Smart Tap Lock"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/main_password_field"/>
+
+    <EditText
+        android:id="@+id/main_password_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_marginTop="75dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginRight="150dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/tap_lock"
+        app:layout_constraintBottom_toTopOf="@+id/main_password_submit"
+        android:hint="PIN"
+        android:inputType="numberPassword" />
+
+    <Button
+        android:id="@+id/main_password_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:layout_marginBottom="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+        />
 
 </android.support.constraint.ConstraintLayout>
